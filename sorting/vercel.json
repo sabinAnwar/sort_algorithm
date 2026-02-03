@@ -1,0 +1,18 @@
+{
+  "framework": null,
+  "installCommand": "npm install && npx prisma format && npx prisma validate && npx prisma generate",
+  "buildCommand": "npm run build",
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": "/api/index"
+    }
+  ],
+  "functions": {
+    "api/index.ts": {
+      "includeFiles": "build/**",
+      "excludeFiles": "public/uploads/**"
+    }
+  }
+ 
+}
