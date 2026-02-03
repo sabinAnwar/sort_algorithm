@@ -1,6 +1,6 @@
 {
   "framework": null,
-  "installCommand": "npm install && npx prisma format && npx prisma validate && npx prisma generate",
+  "installCommand": "npm install",
   "buildCommand": "npm run build"
 
  
