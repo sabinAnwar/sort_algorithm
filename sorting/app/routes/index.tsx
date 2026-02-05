@@ -49,7 +49,7 @@ export default function Index() {
       <header className="home-hero editor-hero">
         <div className="home-hero-copy">
           <p className="eyebrow">Sortieralgorithmen</p>
-          <h1 className="title">Editor-Look fuer echte Klarheit.</h1>
+          <h1 className="title">Editor-Look für echte Klarheit.</h1>
           <p className="lead">
             Fokus auf das Wesentliche: klare Visualisierung, saubere Codezeilen
             und die O-Notation immer im Blick. Waehle deinen Algorithmus und
@@ -138,7 +138,7 @@ export default function Index() {
             </div>
           </div>
           <div className="editor-foot">
-            <span className="pill">Schritt-fuer-Schritt</span>
+            <span className="pill">Schritt-für-Schritt</span>
             <span className="pill">Live Highlight</span>
           </div>
         </div>
