@@ -38,6 +38,14 @@ const COLORS: Record<AlgorithmKey, string> = {
 export default function Index() {
   return (
     <main className="page home">
+      <div className="home-credit-banner">
+        <Rocket size={18} className="credit-icon" />
+        <span className="credit-text">
+          Erstellt von <strong>Sabin El Anwar</strong> und{" "}
+          <strong>Marek Foltz</strong>
+        </span>
+      </div>
+
       <header className="home-hero editor-hero">
         <div className="home-hero-copy">
           <p className="eyebrow">Sortieralgorithmen</p>
