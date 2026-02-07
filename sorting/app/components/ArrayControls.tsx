@@ -1,5 +1,5 @@
 import { CheckCircle, Edit3, RefreshCw, Shuffle } from "lucide-react";
-//TODO: Put import in types
+
 type ArrayControlsProps = {
   inputMode: "manual" | "random";
   inputValue: string;
@@ -58,7 +58,7 @@ export function ArrayControls({
           </button>
         </div>
       ) : (
-        // TODO: Fix min/max values
+        
         <div className="control-row">
           <label className="chip">
             Laenge

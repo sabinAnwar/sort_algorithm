@@ -4,7 +4,7 @@ export const ALGORITHMS: Record<AlgorithmKey, AlgorithmData> = {
   bubble: {
     name: "Bubble Sort",
     structure:
-      "Vergleicht benachbarte Paare und tauscht sie, bis die groessten Werte nach oben „aufsteigen“.",
+      "Vergleicht benachbarte Paare und tauscht sie, bis die größten Werte nach oben „aufsteigen",
     complexity: {
       best: "O(n)",
       average: "O(n^2)",
@@ -60,7 +60,7 @@ export const ALGORITHMS: Record<AlgorithmKey, AlgorithmData> = {
   insertion: {
     name: "Insertion Sort",
     structure:
-      "Baut die sortierte Sequenz von links auf und fuegt jedes neue Element an der richtigen Stelle ein.",
+      "Baut die sortierte Sequenz von links auf und fügt jedes neue Element an der richtigen Stelle ein.",
     complexity: {
       best: "O(n)",
       average: "O(n^2)",
@@ -93,7 +93,7 @@ export const ALGORITHMS: Record<AlgorithmKey, AlgorithmData> = {
           array: [...arr],
           highlight: [i],
           activeLine: 2,
-          note: `Neues Element ${key} einfuegen.`,
+          note: `Neues Element ${key} einfügen.`,
         });
         while (j >= 0 && arr[j] > key) {
           steps.push({
@@ -124,7 +124,7 @@ export const ALGORITHMS: Record<AlgorithmKey, AlgorithmData> = {
   selection: {
     name: "Selection Sort",
     structure:
-      "Sucht in jedem Durchlauf das kleinste Element im Rest und setzt es an die aktuelle Position.",
+      "Sucht in jedem Durchlauf das kleinste Element im Rest und setzt es an die aktuelle Position. Clean-Code-Prinzip: ein klarer, linearer Ablauf mit sprechenden Variablen und einem gezielten Tausch.",
     complexity: {
       best: "O(n^2)",
       average: "O(n^2)",
@@ -198,7 +198,7 @@ export const ALGORITHMS: Record<AlgorithmKey, AlgorithmData> = {
   merge: {
     name: "Merge Sort",
     structure:
-      "Teilt rekursiv, sortiert Teilbereiche und fuegt sie anschliessend geordnet zusammen.",
+      "Teilt rekursiv, sortiert Teilbereiche und fügt sie anschließend geordnet zusammen. Clean-Code-Prinzip: klare Aufgabentrennung zwischen Teilschritten und gut benannten Funktionen.",
     complexity: {
       best: "O(n log n)",
       average: "O(n log n)",
@@ -213,7 +213,6 @@ export const ALGORITHMS: Record<AlgorithmKey, AlgorithmData> = {
       "  const right = mergeSort(arr.slice(mid));",
       "  return merge(left, right);",
       "}",
-      "",
       "function merge(left: number[], right: number[]): number[] {",
       "  const result: number[] = []; // merged output",
       "  let i = 0;",
@@ -257,18 +256,20 @@ export const ALGORITHMS: Record<AlgorithmKey, AlgorithmData> = {
             activeLine: 13,
             note: "Vergleiche Werte aus den Teilfeldern.",
           });
+          let writeLine = 14;
           if (left[i] <= right[j]) {
             arr[k] = left[i];
             i++;
           } else {
             arr[k] = right[j];
             j++;
+            writeLine = 17;
           }
           steps.push({
             array: [...arr],
             highlight: [k],
-            activeLine: 15,
-            note: "Schreibe kleinstes Element zurueck.",
+            activeLine: writeLine,
+            note: "Schreibe kleinstes Element zurück.",
           });
           k++;
         }
@@ -278,7 +279,7 @@ export const ALGORITHMS: Record<AlgorithmKey, AlgorithmData> = {
             array: [...arr],
             highlight: [k],
             activeLine: 22,
-            note: "Linken Rest einfuegen.",
+            note: "Linken Rest einfügen.",
           });
           i++;
           k++;
@@ -289,13 +290,12 @@ export const ALGORITHMS: Record<AlgorithmKey, AlgorithmData> = {
             array: [...arr],
             highlight: [k],
             activeLine: 26,
-            note: "Rechten Rest einfuegen.",
+            note: "Rechten Rest einfügen.",
           });
           j++;
           k++;
         }
       };
-
       const sort = (start: number, end: number) => {
         if (end - start <= 1) return;
         const mid = Math.floor((start + end) / 2);
@@ -315,6 +315,6 @@ export const ALGORITHMS: Record<AlgorithmKey, AlgorithmData> = {
   },
 };
 
-export const DEFAULT_ARRAY = [5, 3, 4, 9,19,1,2,12,13,6];
+export const DEFAULT_ARRAY = [5, 3, 4, 9, 19, 1, 2, 12, 13, 6];
 
 export type { AlgorithmData, AlgorithmKey, Step };

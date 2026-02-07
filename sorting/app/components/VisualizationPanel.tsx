@@ -147,7 +147,7 @@ export function VisualizationPanel({
           </button>
           <button type="button" className="button secondary" onClick={onPrev}>
             <ChevronLeft size={18} />
-            Zurueck
+            Zurück
           </button>
           <button
             type="button"
@@ -190,7 +190,7 @@ export function VisualizationPanel({
         </p>
         {hasCompleted ? (
           <p className="subtle" style={{ color: "#34d399", marginBottom: 8 }}>
-            Animation beendet. Zurueck am Anfang.
+            Animation beendet. Zurück am Anfang.
           </p>
         ) : null}
         <div className="steps">

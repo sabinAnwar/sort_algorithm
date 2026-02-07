@@ -1,6 +1,6 @@
 import { Link } from "react-router";
 import { Activity, ArrowLeft, FileCode, Hash } from "lucide-react";
-//TODO: Put import in types
+
 type AlgorithmHeaderProps = {
   name: string;
   structure: string;
@@ -12,7 +12,7 @@ export function AlgorithmHeader({ name, structure }: AlgorithmHeaderProps) {
       <div>
         <Link className="link-back eyebrow flex items-center gap-2" to="/">
           <ArrowLeft size={16} />
-          Zurueck zur Uebersicht
+          Zurück zur Übersicht
         </Link>
         <h1 className="title">{name}</h1>
         <p className="text-[color:var(--ink-soft)] text-[1.15rem] max-w-[600px] leading-relaxed">
